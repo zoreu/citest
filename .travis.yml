@@ -15,4 +15,4 @@ script:
 - git clone -b master "https://$token@github.com/zoreu/citest.git" output
 - php gerarlink2.php
 - cd output
-- git add -A && git commit -m Update && git push -u origin master
+- git add -A && git commit -m 'Update [ci skip]' && git push -u origin master
