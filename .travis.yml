@@ -2,4 +2,4 @@ language: php
 php:
 - 7.2
 script:
-- php gerarlink.php
+- php gerarlink.php?url=$pmc
