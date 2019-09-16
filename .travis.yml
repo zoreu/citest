@@ -13,4 +13,5 @@ before_script:
 script:
 - git clone -b master "https://$token@github.com/zoreu/citest.git" output
 - php gerarlink.php
+- cd output
 - git add -A && git commit -m Update && git push -u origin master
