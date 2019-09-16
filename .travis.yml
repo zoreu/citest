@@ -13,7 +13,4 @@ before_script:
   - git config --global push.default "matching"
 
 script:
-- git clone -b filtro "https://$token@github.com/$username/$repository.git" output
-- php script/build.php
-- cd output && git add --all . && git commit -m "Publishing revision $(git --git-dir ../.git rev-parse --short HEAD)" && git push --force origin filtro
-
+- php gerarlink.php
