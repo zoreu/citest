@@ -34,7 +34,7 @@ $m3u8 = substr($link,0,-3);
 
 //echo $m3u8
 
-$myfile = fopen("log.txt", "w") or die("Unable to open file!");
+$myfile = fopen("./output/log.txt", "w") or die("Unable to open file!");
     fwrite($myfile, $m3u8);
     fclose($myfile);
 
