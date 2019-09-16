@@ -1,18 +1,18 @@
-language: php
-php:
-- 7.2
-branches:
-  only:
-  - master
+#language: php
+#php:
+#- 7.2
+#branches:
+#  only:
+#  - master
   
-before_script:
-  - git config --global user.email "travis@travis-ci.org"
-  - git config --global user.name "TravisCI"
-  - git config --global push.default "matching"
-  - composer require kyranrana/cloudflare-bypass
+#before_script:
+#  - git config --global user.email "travis@travis-ci.org"
+#  - git config --global user.name "TravisCI"
+#  - git config --global push.default "matching"
+#  - composer require kyranrana/cloudflare-bypass
 
-script:
-- git clone -b master "https://$token@github.com/zoreu/citest.git" output
-- php gerarlink3.php
-- cd output
-- git add -A && git commit -m 'Update [ci skip]' && git push -u origin master
+#script:
+#- git clone -b master "https://$token@github.com/zoreu/citest.git" output
+#- php gerarlink3.php
+#- cd output
+#- git add -A && git commit -m 'Update [ci skip]' && git push -u origin master
