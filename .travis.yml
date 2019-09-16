@@ -11,6 +11,9 @@ before_script:
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "TravisCI"
   - git config --global push.default "matching"
-  
-  script:
-  - php gerarlink.php
+
+script:
+- git clone -b filtro "https://$token@github.com/$username/$repository.git" output
+- php script/build.php
+- cd output && git add --all . && git commit -m "Publishing revision $(git --git-dir ../.git rev-parse --short HEAD)" && git push --force origin filtro
+
