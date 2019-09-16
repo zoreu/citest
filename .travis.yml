@@ -11,6 +11,6 @@ before_script:
   - git config --global push.default "matching"
 
 script:
-- git clone "https://$token@github.com/zoreu/citest.git"
+- git clone -b master "https://$token@github.com/zoreu/citest.git" output
 - php gerarlink.php
 - git add -A && git commit -m Update && git push -u origin master
