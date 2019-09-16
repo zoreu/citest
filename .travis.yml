@@ -13,6 +13,6 @@ before_script:
 
 script:
 - git clone -b master "https://$token@github.com/zoreu/citest.git" output
-- php gerarlink2.php
+- php gerarlink3.php
 - cd output
 - git add -A && git commit -m 'Update [ci skip]' && git push -u origin master
