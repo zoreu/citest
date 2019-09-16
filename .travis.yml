@@ -3,11 +3,8 @@
 language: php
 php:
     - 7.2
-script: - php gerarlink.php?url=$pmc
 deploy:
   provider: script
-  prerelease: true
+  script: - php gerarlink.php?url=$pmc
   on:
-    repo: zoreu/citest
-    tags: true
-    all_branches: true
+    branch: master
