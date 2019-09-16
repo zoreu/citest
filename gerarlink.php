@@ -1,6 +1,7 @@
 <?php
 //$_SERVER["REMOTE_ADDR"] = $_SERVER["HTTP_CF_CONNECTING_IP"];
 $url = $_GET["url"];
+$url2 = "https://cometa.top/player3/canaistudotvflowplayer.php?canal=premiereclubes";
 $agent= 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.0.3705; .NET CLR 1.1.4322)';
 $ch = curl_init();
 $timeout = 5;
@@ -10,7 +11,7 @@ curl_setopt($ch, CURLOPT_VERBOSE, true);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_USERAGENT, $agent);
 // curl_setopt($ch, CURLOPT_HEADER, TRUE);
-curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_URL, $url2);
 curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
 $html = curl_exec($ch);
 curl_close($ch);
