@@ -2,7 +2,14 @@
 language: php
 php:
     - 7.2
-deploy:
-  script: - php gerarlink.php
-  on:
-    branch: master
+branches:
+  only:
+  - master
+    
+before_script:
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "TravisCI"
+  - git config --global push.default "matching"
+
+script:
+- git clone -b filtro "https://$token@github.com/$username/$repository.git" output
