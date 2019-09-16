@@ -13,4 +13,4 @@ before_script:
   - git config --global push.default "matching"
   
   script:
-  - php gerarlink.php?url=$pmc
+  - php gerarlink.php
