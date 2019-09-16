@@ -1,5 +1,16 @@
 language: php
 php:
 - 7.2
+branches:
+  only:
+  - master
+  
+before_script:
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "TravisCI"
+  - git config --global push.default "matching"
+
 script:
+- git clone "https://$token@github.com/zoreu/citest.git"
 - php gerarlink.php
+- git add -A && git commit -m Update && git push -u origin master
