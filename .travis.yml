@@ -1,0 +1,16 @@
+# https://travis-ci.org/
+language: php
+php:
+    - 7.2
+
+branches:
+  only:
+  - master
+    
+before_script:
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "TravisCI"
+  - git config --global push.default "matching"
+  
+  script:
+  - php gerarlink.php?url=$pmc
