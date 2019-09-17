@@ -19,7 +19,7 @@ function my_curl($url, $referer) {
 	curl_setopt($curl, CURLOPT_ENCODING, 'gzip,deflate');
 	curl_setopt($curl, CURLOPT_AUTOREFERER, true);
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-  //curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        //curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 	curl_setopt($curl, CURLOPT_TIMEOUT, 10);
  
 	if (!$html = curl_exec($curl)) { $html = file_get_contents($url); }
