@@ -4,7 +4,7 @@ $url = "link-da-pagina";
 //$url = $_GET["url"]
 $agent= 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.0.3705; .NET CLR 1.1.4322)';
 $ch = curl_init();
-$timeout = 10;
+$timeout = 17;
 // curl_getinfo($ch, CURLINFO_HTTP_CODE);
 ///////////////Proxy/////////////////////////////
 curl_setopt($ch, CURLOPT_PROXY, "177.8.170.62");
